@@ -1,0 +1,47 @@
+django项目
+-环境搭建 anaconda+pycharm
+-anaconda使用
+	-conda list:显示当前环境安装的包
+	-conda env list：显示安装的虚拟环境列表
+	-conda create -n env_name python=3.6
+	-激活conda的虚拟环境
+		-（linux）source activate env_name
+		-（windows）conda activate env_name
+-安装django
+     -pip install django
+
+1、创建django项目
+django-admin startproject myproject
+
+2、启动项目-可以命令行启动也可以配置pycharm启动
+python manage.py runserver
+python manage.py runserver 8080
+
+3、创建django的APP应用
+python manage.py startapp polls
+
+4、创建数据库表，基于模型建表
+进入APP所在的目录
+python manage.py migrate
+如果模型是已经建好的，需要修改的话则先执行迁移命令
+python manage.py makemigrations polls  后执行 python manage.py migrate
+
+5、python的调试工具入口，用于测试
+python manage.py shell
+
+6、如果要设置图形验证码需要导入
+pip install django-simple-captcha
+并在settings.py的INSTALLED_APPS 里面注册captcha
+然后执行数据库python manage.py migrate
+
+7、登录session 和 用户注册登录加密
+
+8、邮箱确认
+
+9、创建requirements 文件 requirements.txt
+在项目文件下 pip freeze  > ./requirements.txt
+使用别人的环境则需要pip install -r requirements.txt
+10、创建.gitignore 限制上传的文件
+
+
+

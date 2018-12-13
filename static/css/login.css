@@ -1,0 +1,46 @@
+body {
+  background-color: #eee;
+  background-image:url(/static/images/landscape.jpg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;/*属性设置为 "fixed"，才能保证该属性在 Firefox 和 Opera 中正常工作。*/
+  background-size: 100%;
+}
+.form-login {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-login .form-control {
+  /*给控件框设置相对位置*/
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;/* Safari */
+     -moz-box-sizing: border-box;/* Firefox */
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-login .form-control:focus {
+  /*设置索引的序号*/
+  z-index: 2 ;
+}
+.form-login input[type="text"] {
+  /*给边框设置下边间距*/
+  margin-bottom: -1px;
+  /*以下时给边框设置圆角*/
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.form-login input[type="password"] {
+  /*给边框设置下边间距*/
+  margin-bottom: 10px;
+  /*以下时给边框设置圆角*/
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
